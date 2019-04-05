@@ -18,105 +18,7 @@ body{
     width: 100%;
     min-height: 100%;
 }
-.login-bg{
-    /*background: #eeeeee url() 0 0 no-repeat;*/
-     background:url(../images/bg.png) no-repeat center;
-    background-size: cover;
-    overflow: hidden;
-}
-.login{
-    margin: 120px auto 0 auto;
-    min-height: 420px;
-    max-width: 420px;
-    padding: 40px;
-    background-color: #ffffff;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-    /* overflow-x: hidden; */
-    box-sizing: border-box;
-}
-.login a.logo{
-    display: block;
-    height: 58px;
-    width: 167px;
-    margin: 0 auto 30px auto;
-    background-size: 167px 42px;
-}
-.login .message {
-    margin: 10px 0 0 -58px;
-    padding: 18px 10px 18px 60px;
-    background: #189F92;
-    position: relative;
-    color: #fff;
-    font-size: 16px;
-}
-.login #darkbannerwrap {
-    background: url(../images/aiwrap.png);
-    width: 18px;
-    height: 10px;
-    margin: 0 0 20px -58px;
-    position: relative;
-}
 
-.login input[type=text],
-.login input[type=file],
-.login input[type=password],
-.login input[type=email], select {
-    border: 1px solid #DCDEE0;
-    vertical-align: middle;
-    border-radius: 3px;
-    height: 50px;
-    padding: 0px 16px;
-    font-size: 14px;
-    color: #555555;
-    outline:none;
-    width:100%;
-    box-sizing: border-box;
-}
-.login input[type=text]:focus,
-.login input[type=file]:focus,
-.login input[type=password]:focus,
-.login input[type=email]:focus, select:focus {
-    border: 1px solid #27A9E3;
-}
-.login input[type=submit],
-.login input[type=button]{
-    display: inline-block;
-    vertical-align: middle;
-    padding: 12px 24px;
-    margin: 0px;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    color: #ffffff;
-    background-color: #189F92;
-    border-radius: 3px;
-    border: none;
-    -webkit-appearance: none;
-    outline:none;
-    width:100%;
-}
-.login hr {
-    background: #fff url() 0 0 no-repeat;
-}
-.login hr.hr15 {
-    height: 15px;
-    border: none;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-}
-.login hr.hr20 {
-    height: 20px;
-    border: none;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-}
 .x-body{
     padding: 20px;
 }
@@ -223,7 +125,6 @@ xblock{
     width: 100%;
     height: 45px;
     background-color: #222;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .container .logo a{
     float: left;
@@ -285,8 +186,9 @@ xblock{
 }
 .left-nav{
     position: absolute;
-    top: 46px;
-    bottom: 42px;
+    top: 45px;
+    bottom: 0px;
+    /*bottom: 42px;*/
     left: 0;
     z-index: 2;
     padding-top: 10px;
@@ -295,13 +197,14 @@ xblock{
     max-width: 220px;
     overflow: auto;
     overflow-x:hidden;
-    border-right: 1px solid #e5e5e5;
+    overflow: hidden;
 
     /*width: 0px;*/
 }
-.left-nav #nav li{
-    border-bottom: 1px solid #e5e5e5;
+#side-nav{
+    width: 220px;
 }
+
 .left-nav #nav li:hover > a{
     /*color: blue;*/
 }
@@ -310,9 +213,21 @@ xblock{
 }
 .left-nav #nav li a{
     font-size: 14px;
-    padding: 10px 15px 10px 20px;
+    padding: 10px 15px 10px 15px;
     display: block;
     cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: all 0.3s;
+}
+.left-nav a:hover{
+    background: #009688 !important;
+    color: #fff;
+    border-color:  #04564e !important;
+}
+.left-nav a.active{
+    background: #009688 !important;
+    color: #fff;
+    border-color:  #04564e !important;
 }
 .left-nav #nav li a cite{
     font-size: 14px;
@@ -342,9 +257,9 @@ xblock{
 .left-nav #nav li .sub-menu li .sub-menu li a{
     padding-left: 45px;
 }
-.left-nav #nav li .sub-menu li a:hover{
+/*.left-nav #nav li .sub-menu li a:hover{
     color: #148cf1;
-}
+}*/
 .left-nav #nav li .sub-menu li a i{
     font-size: 12px;
 }
@@ -362,25 +277,27 @@ xblock{
     background: url(../images/icon.png) 0 0 no-repeat;
     position: absolute;
     top: 200px;
-    left: 221px;
+    left: 220px;
     cursor: pointer;
     z-index: 3;
 }
 .page-content{
     position: absolute;
-    top: 46px;
+    top: 45px;
     right: 0;
-    bottom: 42px;
-    left: 221px;
+    /*bottom: 42px;*/
+    bottom: 0px;
+    left: 220px;
     overflow: hidden;
     z-index: 1;
 }
 .page-content-bg{
     position: absolute;
-    top: 46px;
+    top: 45px;
     right: 0;
-    bottom: 42px;
-    left: 221px;
+    /*bottom: 42px;*/
+    bottom: 0px;
+    left: 220px;
     background: rgba(0,0,0,0.5); url() 0 0 no-repeat;
     overflow: hidden;
     z-index: 100;
@@ -552,10 +469,16 @@ table th, table td {
         /*float: right;*/
     }
     .left-nav{
-        left: -221px;
+        width: 60px;
+    }
+    .left-nav #nav li a i{
+        font-size: 18px;
+    }
+    .left-nav cite,.left-nav .nav_right{
+        display: none;
     }
     .page-content{
-        left: 0px;
+        left: 60px;
     }
     .page-content .layui-tab-content .layui-tab-item{
         -webkit-overflow-scrolling: touch; 
@@ -566,8 +489,129 @@ table th, table td {
         margin: 10px;
     }
 }
+/*不同主题样式*/
+body{
+    background:#F2F1F2;
+}
+body.layuiadmin{
+    background:#F2F1F2;
+}
+.layuiadmin .container{
+    background:#1A1B20;
+}
+.layuiadmin .left-nav{
+    background:#1A1B20;
+}
 
+.layuiadmin .left-nav a{
+    color:rgba(255,255,255,.7);
+}
+.layuiadmin .left-nav a.active{
+    background: #009688 !important;
+    color: #fff;
+}
+.layuiadmin .left-nav a:hover{
+    background: #009688 !important;
+    color: #fff;
+}
+/*--------------------------------------------*/
+body.bootstrap4{
+    background:#EEF5F9;
+}
+.bootstrap4 .container{
+    background:#323640;
+}
+.bootstrap4 .left-nav{
+    background:#fff;
+}
 
+.bootstrap4 .left-nav a{
+    color:#686a76;
+}
+.bootstrap4 .left-nav a.active{
+    background: #786AED !important;
+    color: #fff;
+    border-color: #3D29E5 !important;
+}
+.bootstrap4 .left-nav a:hover{
+    background: #786AED !important;
+    color: #fff;
+    border-color:  #3D29E5 !important;
+}
+
+/*---------------------------------------*/
+body.flatty{
+    background:#E8E8E8;
+}
+.flatty .container{
+    background:#F34743;
+}
+
+.flatty .left-nav{
+    background:#F4F4F4;
+}
+
+.flatty .left-nav a{
+    color:#686a76;
+}
+.flatty .left-nav a.active{
+    background: #FEFEFE !important;
+    color: #F34743;
+    border-color:  #F34743 !important;
+}
+.flatty .left-nav a:hover{
+    background: #FEFEFE !important;
+    color: #F34743;
+    border-color:  #F34743 !important;
+}
+/*--------------------------------------------------*/
+body.tpez{
+    background:#E4E4E4;
+}
+.tpez .container{
+    background:#019587;
+}
+.tpez .left-nav{
+    background:#263035;
+}
+
+.tpez .left-nav a{
+    color:#fff;
+}
+.tpez .left-nav a.active{
+    background: #15191B !important;
+    border-color:  #019587 !important;
+}
+.tpez .left-nav a:hover{
+    background: #15191B !important;
+    border-color:  #019587 !important;
+}
+
+/*---------------------------------------*/
+body.businessbox{
+    background:#EEF5F9;
+}
+.businessbox .container{
+    background:linear-gradient(to left, #7b4397, #2196f3);
+}
+
+.businessbox .left-nav{
+    background:#fff;
+}
+
+.businessbox .left-nav a{
+    color:#686a76;
+}
+.businessbox .left-nav a.active{
+    background: linear-gradient(to left, #7c8ce4, #2196f3) !important;
+    color: #fff;
+    border-color:  #7b4397 !important;
+}
+.businessbox .left-nav a:hover{
+    background: linear-gradient(to left, #7c8ce4, #2196f3) !important;
+    color: #fff;
+    border-color:  #7b4397 !important;
+}
 /*精细版样式*/
 
 .x-admin-sm{
