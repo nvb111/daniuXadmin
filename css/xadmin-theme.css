@@ -1,0 +1,119 @@
+/*不同主题样式*/
+body{
+    background:#F2F1F2;
+}
+.container{
+    background:#1A1B20;
+}
+.left-nav{
+    background:#1A1B20;
+}
+
+.left-nav a{
+    color:rgba(255,255,255,.7);
+}
+..left-nav a.active{
+    background: #009688 !important;
+    color: #fff;
+}
+.left-nav a:hover{
+    background: #009688 !important;
+    color: #fff;
+}
+/*--------------------------------------------*/
+body{
+    background:#EEF5F9;
+}
+.container{
+    background:#323640;
+}
+.left-nav{
+    background:#fff;
+}
+
+.left-nav a{
+    color:#686a76;
+}
+.left-nav a.active{
+    background: #786AED !important;
+    color: #fff;
+}
+.left-nav a:hover{
+    background: #786AED !important;
+    color: #fff;
+}
+
+/*---------------------------------------*/
+body{
+    background:#E8E8E8;
+}
+.container{
+    background:#F34743;
+}
+
+.left-nav{
+    background:#F4F4F4;
+}
+
+.left-nav a{
+    color:#686a76;
+}
+.left-nav a.active{
+    background: #FEFEFE !important;
+    color: #F34743;
+}
+.left-nav a:hover{
+    background: #FEFEFE !important;
+    color: #F34743;
+}
+/*--------------------------------------------------*/
+body{
+    background:#E4E4E4;
+}
+.container{
+    background:#019587;
+}
+.left-nav{
+    background:#263035;
+}
+
+.left-nav a{
+    color:#fff;
+}
+.left-nav a.active{
+    background: #212525 !important;
+    color: #fff !important;
+}
+.left-nav a:hover{
+    background: #212525 !important;
+    color: #fff !important;
+}
+
+/*---------------------------------------*/
+/*body{
+    background:#EEF5F9 !important;
+}
+.container{
+    background:linear-gradient(to left, #7b4397, #2196f3);
+}
+
+.left-nav{
+    background:#fff !important;
+}
+
+.left-nav a{
+    color:#686a76 !important;
+}
+.left-nav a.active{
+    background: linear-gradient(to left, #7c8ce4, #2196f3) !important;
+    color: #fff !important;
+    border-color:  #7b4397 !important;
+}
+.left-nav a:hover{
+    background: linear-gradient(to left, #7c8ce4, #2196f3) !important;
+    color: #fff !important;
+    border-color:  #7b4397 !important;
+}
+.container .logo a{
+    background: rgba(0,0,0,0) !important;
+}*/
