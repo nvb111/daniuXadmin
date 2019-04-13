@@ -36,14 +36,11 @@
   Xadmin.prototype.del_tab = function (id) {
 
     if(id){
-        console.log(88);
+      console.log(88);
     }else{
-        console.log(99);
+      var id = $(window.frameElement).attr('tab-id');
+      parent.element.tabDelete('xbs_tab', id);
     }
-    // var id = md5(url);//md5每个url
-
-    
-
   }
 
 	Xadmin.prototype.add_lay_tab = function(title,url,id) {
