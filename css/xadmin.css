@@ -90,9 +90,14 @@ body{
     height: 45px;
     background-color: #222;
 }
+.container a,.layui-nav .layui-nav-item a{
+    color: #fff;
+}
+.container .logo a{
+    background-color: rgba(0,0,0,0);
+}
 .container .logo a{
     float: left;
-    color: #fff;
     font-size: 18px;
     padding-left: 20px;
     line-height: 45px;
@@ -106,11 +111,11 @@ body{
 .container .left_open{
     height: 45px;
     float: left;
+    margin-left: 10px;
 }
 .container .left_open i{
     display: block;
     background: rgba(255,255,255,0.1);
-    color: #fff;
     width: 32px;
     height: 32px;
     line-height: 32px;
@@ -141,7 +146,6 @@ body{
     margin-right: 10px;
 }
 .layui-nav .layui-nav-item a{
-    color: #fff;
     cursor: pointer;
 }
 .layui-nav .layui-nav-child a{
@@ -271,7 +275,7 @@ body{
 .page-content .tab{
     height: 100%;
     width: 100%;
-    background: #EFEEF0;
+    /*background: #EFEEF0;*/
     margin: 0px;
 }
 .page-content .layui-tab-title{
@@ -308,7 +312,6 @@ body{
     top: 36px;
     bottom: 0px;
     width: 100%;
-    background: #fff ;
     padding: 0px;
     overflow: hidden;
 }

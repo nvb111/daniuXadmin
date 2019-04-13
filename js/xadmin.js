@@ -33,13 +33,26 @@
 
 	}
 
+  Xadmin.prototype.del_tab = function (id) {
+
+    if(id){
+        console.log(88);
+    }else{
+        console.log(99);
+    }
+    // var id = md5(url);//md5每个url
+
+    
+
+  }
+
 	Xadmin.prototype.add_lay_tab = function(title,url,id) {
 		element.tabAdd('xbs_tab', {
 	       title: title 
 	        ,content: '<iframe tab-id="'+id+'" frameborder="0" src="'+url+'" scrolling="yes" class="x-iframe"></iframe>'
 	        ,id: id
 	    })
-	};
+	}
 	/**
 	 * [open 打开弹出层]
 	 * @param  {[type]}  title [弹出层标题]
@@ -189,7 +202,7 @@ layui.use(['layer','element'],function() {
         }
         event.stopPropagation(); 
     })
-
+    var left_tips_index = null;
     $('.left-nav #nav').on('mouseenter', '.left-nav-li', function(event) {
       if($('.left-nav').css('width')!='220px'){
         var tips  = $(this).attr('lay-tips');

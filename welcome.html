@@ -8,29 +8,32 @@
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
         <link rel="stylesheet" href="./css/font.css">
         <link rel="stylesheet" href="./css/xadmin.css">
-        <link rel="stylesheet" href="./css/xadmin-theme.css">
+        <!-- <link rel="stylesheet" href="./css/theme5.css"> -->
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script src="./lib/layui/layui.js" charset="utf-8"></script>
         <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         <div class="layui-fluid">
             <div class="layui-row layui-col-space15">
                 <div class="layui-col-md12">
                     <div class="layui-card">
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <blockquote class="layui-elem-quote">欢迎管理员：
                                 <span class="x-red">test</span>！当前时间:2018-04-25 20:50:53
-                                <a onclick="parent.xadmin.add_tab('在tab打开','https://www.163.com',true)" style="color: red" href="javascript:;">iframe页面中打开tab事例</a>/
-                                <a onclick="xadmin.open('iframe页面中打开open事例','https://www.163.com')" style="color: red" href="javascript:;">iframe页面中打开open事例</a>/
-                                <a onclick="parent.xadmin.open('在上一级窗口打开open事件','http://www.baidu.com')('在tab打开','https://www.163.com')" style="color: red" href="javascript:;">在上一级窗口打开open事件</a></blockquote>
+                            </blockquote>
                         </div>
                     </div>
                 </div>
                 <div class="layui-col-md12">
                     <div class="layui-card">
                         <div class="layui-card-header">数据统计</div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
                                 <li class="layui-col-md2 layui-col-xs6">
                                     <a href="javascript:;" class="x-admin-backlog-body">
@@ -82,7 +85,7 @@
                     <div class="layui-card">
                         <div class="layui-card-header">下载
                             <span class="layui-badge layui-bg-cyan layuiadmin-badge">月</span></div>
-                        <div class="layui-card-body layuiadmin-card-list ">
+                        <div class="layui-card-body  ">
                             <p class="layuiadmin-big-font">33,555</p>
                             <p>新下载
                                 <span class="layuiadmin-span-color">10%
@@ -95,7 +98,7 @@
                     <div class="layui-card">
                         <div class="layui-card-header">下载
                             <span class="layui-badge layui-bg-cyan layuiadmin-badge">月</span></div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <p class="layuiadmin-big-font">33,555</p>
                             <p>新下载
                                 <span class="layuiadmin-span-color">10%
@@ -108,7 +111,7 @@
                     <div class="layui-card">
                         <div class="layui-card-header">下载
                             <span class="layui-badge layui-bg-cyan layuiadmin-badge">月</span></div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <p class="layuiadmin-big-font">33,555</p>
                             <p>新下载
                                 <span class="layuiadmin-span-color">10%
@@ -121,7 +124,7 @@
                     <div class="layui-card">
                         <div class="layui-card-header">下载
                             <span class="layui-badge layui-bg-cyan layuiadmin-badge">月</span></div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <p class="layuiadmin-big-font">33,555</p>
                             <p>新下载
                                 <span class="layuiadmin-span-color">10%
@@ -133,7 +136,7 @@
                 <div class="layui-col-md12">
                     <div class="layui-card">
                         <div class="layui-card-header">系统信息</div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <table class="layui-table">
                                 <tbody>
                                     <tr>
@@ -177,7 +180,7 @@
                 <div class="layui-col-md12">
                     <div class="layui-card">
                         <div class="layui-card-header">开发团队</div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <table class="layui-table">
                                 <tbody>
                                     <tr>
@@ -193,6 +196,7 @@
                         </div>
                     </div>
                 </div>
+                <style id="welcome_style"></style>
                 <div class="layui-col-md12">
                     <blockquote class="layui-elem-quote layui-quote-nm">感谢layui,百度Echarts,jquery,本系统由x-admin提供技术支持。</blockquote></div>
             </div>

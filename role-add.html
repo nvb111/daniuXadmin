@@ -20,8 +20,9 @@
   </head>
   
   <body>
-    <div class="x-body">
-        <form action="" method="post" class="layui-form layui-form-pane">
+    <div class="layui-fluid">
+        <div class="layui-row">
+            <form action="" method="post" class="layui-form layui-form-pane">
                 <div class="layui-form-item">
                     <label for="name" class="layui-form-label">
                         <span class="x-red">*</span>角色名
@@ -85,6 +86,7 @@
                 <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
               </div>
             </form>
+        </div>
     </div>
     <script>
         layui.use(['form','layer'], function(){

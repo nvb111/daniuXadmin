@@ -12,6 +12,10 @@
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script src="./lib/layui/layui.js" charset="utf-8"></script>
         <script type="text/javascript" src="./js/xadmin.js"></script>
+        <!--[if lt IE 9]>
+          <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+          <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         <div class="x-nav">
@@ -28,7 +32,7 @@
             <div class="layui-row layui-col-space15">
                 <div class="layui-col-md12">
                     <div class="layui-card">
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <form class="layui-form layui-col-space5">
                                 <div class="layui-inline layui-show-xs-block">
                                     <input class="layui-input"  autocomplete="off" placeholder="开始日" name="start" id="start">
@@ -48,7 +52,7 @@
                             <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
                             <button class="layui-btn" onclick="xadmin.open('添加用户','./member-add.html',600,400)"><i class="layui-icon"></i>添加</button>
                         </div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <table class="layui-table layui-form">
                                 <thead>
                                   <tr>
@@ -223,7 +227,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="layui-card-body layuiadmin-card-list">
+                        <div class="layui-card-body ">
                             <div class="page">
                                 <div>
                                   <a class="prev" href="">&lt;&lt;</a>
