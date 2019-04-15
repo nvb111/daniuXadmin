@@ -59,7 +59,7 @@
 	 * @param  {Boolean} full  [全屏]
 	 * @return {[type]}        [description]
 	 */
-	Xadmin.prototype.open = function (title,url,w,h,full=false) {
+	Xadmin.prototype.open = function (title,url,w,h,full) {
 		if (title == null || title == '') {
 	        var title=false;
 	    };
@@ -153,9 +153,10 @@
 	
 }(window);
 
-layui.use(['layer','element'],function() {
+layui.use(['layer','element','jquery'],function() {
     layer = layui.layer;
     element = layui.element;
+    $ = layui.jquery;
 
 
     // 打开页面初始
