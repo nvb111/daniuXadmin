@@ -13,6 +13,20 @@
 		}
 		element.tabChange('xbs_tab', i);
 	};
+  /**
+   * [end 执行结束要做的]
+   * @return {[type]} [description]
+   */
+  Xadmin.prototype.end = function() {
+
+    var cate_list = this.get_cate_data();
+
+    for(var i in cate_list){
+      if(cate_list[i]!=null){
+        $('.left-nav #nav li').eq(cate_list[i]).click();
+      }
+    }
+  };
 
 	Xadmin.prototype.add_tab = function (title,url,is_refresh) {
 		var id = md5(url);//md5每个url
@@ -94,11 +108,20 @@
 		var index = parent.layer.getFrameIndex(window.name);
     	parent.layer.close(index);
 	};
+  /**
+   * [close 关闭弹出层父窗口关闭]
+   * @return {[type]} [description]
+   */
+  Xadmin.prototype.father_reload = function() {
+      parent.location.reload();
+  };
 	/**
 	 * [get_data 获取所有项]
 	 * @return {[type]} [description]
 	 */
 	Xadmin.prototype.get_data = function () {
+    if(typeof is_remember!="undefined")
+          return false;
 		return layui.data('tab_list')
 	}
 	/**
@@ -115,6 +138,27 @@
 		  ,value: {title:title,url:url}
 		});
 	};
+
+  /**
+   * [get_data 获取所有项]
+   * @return {[type]} [description]
+   */
+  Xadmin.prototype.get_cate_data = function () {
+    if(typeof is_remember!="undefined")
+          return false;
+    return layui.data('cate')
+  }
+  /**
+   * [set_data 增加某一项]
+   * @param {[type]} id [description]
+   */
+  Xadmin.prototype.set_cate_data = function(data) {
+
+    if(typeof is_remember!="undefined")
+          return false;
+
+    layui.data('cate', data);
+  };
 	/**
 	 * [del_data 删除某一项]
 	 * @param  {[type]} id [description]
@@ -169,6 +213,23 @@ layui.use(['layer','element','jquery'],function() {
     });
     //左侧菜单
     $('.left-nav #nav').on('click', 'li', function(event) {
+
+        if($(this).parent().attr('id')=='nav'){
+          xadmin.set_cate_data({key:'f1',value:$('.left-nav #nav li').index($(this))})
+          xadmin.set_cate_data({key:'f2',value:null})
+          xadmin.set_cate_data({key:'f3',value:null})
+        }
+
+        if($(this).parent().parent().parent().attr('id')=='nav'){
+          xadmin.set_cate_data({key:'f2',value:$('.left-nav #nav li').index($(this))})
+          xadmin.set_cate_data({key:'f3',value:null})
+        }
+
+        if($(this).parent().parent().parent().parent().parent().attr('id')=='nav'){
+          xadmin.set_cate_data({key:'f3',value:$('.left-nav #nav li').index($(this))})
+        }
+
+
 
         if($('.left-nav').css('width')=='60px'){
           $('.left-nav').animate({width: '220px'}, 100);
@@ -271,6 +332,9 @@ layui.use(['layer','element','jquery'],function() {
         $('#tab_right').hide();
         $('#tab_show').hide();
     });
+
+    // 页面加载完要做的
+    xadmin.end();
 })
 // md5-----------------------------------------------------------------------------------
 /*

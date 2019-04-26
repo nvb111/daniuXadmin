@@ -52,7 +52,7 @@
                 </form>
             </div>
         </div>
-        <script>layui.use(['form', 'layer'],
+        <script>layui.use(['form', 'layer','jquery'],
             function() {
                 $ = layui.jquery;
                 var form = layui.form,
@@ -83,10 +83,10 @@
                     },
                     function() {
                         //关闭当前frame
-                        x_admin_close();
+                        xadmin.close();
 
                         // 可以对父窗口进行刷新 
-                        x_admin_father_reload();
+                        xadmin.father_reload();
                     });
                     return false;
                 });
