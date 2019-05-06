@@ -14,6 +14,18 @@ http://x.xuebingsi.com
 
 交流QQ群：519492808
 
+## 2019-05-06更新
+
+修改静态表格展现问题，设置td 最小宽度为80px,table宽度溢出自动出现滚动。
+升级方式，下载复制最新的 xadmin.css 在table外盒子增加 两个类。
+修改如下：class增加"layui-table-body layui-table-main"
+ ```
+<div class="layui-card-body layui-table-body layui-table-main">
+    <table class="layui-table layui-form">
+    </table>
+</div
+```
+
 ## 2019-04-26更新
 
 * 完善tab 打开的记忆功能，之后关闭后，之前写入的tab 还可以读取出来
